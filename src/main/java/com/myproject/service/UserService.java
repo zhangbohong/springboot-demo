@@ -16,15 +16,8 @@ public class UserService {
     @Resource
     IUserMapper iUserMapper;
 
-    @Autowired
-    @Qualifier("masterJdbcTemplate")
-    protected JdbcTemplate masterJdbcTemplate;
 
-    @Autowired
-    @Qualifier("readOnlyJdbcTemplate")
-    protected JdbcTemplate readOnlyJdbcTemplate;
 
-    @TargetDataSource(value = "master")
     public List<User> getAllUser() {
         // TODO 自动生成的方法存根
         return iUserMapper.getAllUser();

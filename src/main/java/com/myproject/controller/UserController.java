@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
-    @Qualifier(value = "userService")
+    @Qualifier("userService")
     private UserService userService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
