@@ -12,8 +12,8 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface TargetDataSource {
-    public static final String master = "master";
-    public static final String readonly = "readonly";
+    String master = "master";
+    String readonly = "readonly";
 
     String value();
 }
