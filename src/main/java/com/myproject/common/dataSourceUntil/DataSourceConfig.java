@@ -12,15 +12,11 @@ import javax.sql.DataSource;
 
 @Configuration
 public class DataSourceConfig {
-    /**
-     * master datasource
-     *
-     * @return
-     */
+
     @Bean(name = "masterDataSource")
     @Qualifier("masterDataSource")
     @Primary
-    @ConfigurationProperties(prefix = "spring.master")
+    @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource masterDataSource() {
         return DataSourceBuilder.create().build();
     }
@@ -28,7 +24,7 @@ public class DataSourceConfig {
 
     @Bean(name = "readOnlyDataSource")
     @Qualifier("readOnlyDataSource")
-    @ConfigurationProperties(prefix = "spring.readonly")
+    @ConfigurationProperties(prefix = "custom.datasource.readonly")
     public DataSource readOnlyDataSource() {
         return DataSourceBuilder.create().build();
     }
