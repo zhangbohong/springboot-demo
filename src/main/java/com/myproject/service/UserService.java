@@ -1,11 +1,8 @@
 package com.myproject.service;
 
 import com.myproject.common.dataSourceUntil.TargetDataSource;
-import com.myproject.dao.IUserMapper;
+import com.myproject.dao.mybatis.IUserMapper;
 import com.myproject.domain.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -17,13 +14,13 @@ public class UserService {
     IUserMapper iUserMapper;
 
 
-
+    @TargetDataSource(TargetDataSource.master)
     public List<User> getAllUser() {
         // TODO 自动生成的方法存根
         return iUserMapper.getAllUser();
     }
 
-    @TargetDataSource(value = "readonly")
+    @TargetDataSource(TargetDataSource.readonly)
     public User getUserByID(int id) {
         // TODO 自动生成的方法存根
         return iUserMapper.getUserByID(id);

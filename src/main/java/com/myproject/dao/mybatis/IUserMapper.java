@@ -1,4 +1,4 @@
-package com.myproject.dao;
+package com.myproject.dao.mybatis;
 
 import com.myproject.domain.User;
 import org.apache.ibatis.annotations.*;
