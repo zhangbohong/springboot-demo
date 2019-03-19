@@ -1,22 +1,13 @@
-package com.myproject.dao.mybatis;
+package com.myproject.dao.mybatis.mapper;
 
 import com.myproject.domain.User;
 import org.apache.ibatis.annotations.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Repository;
 
-import javax.annotation.Resource;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 @Mapper
 public interface IUserMapper {
-    @Select("select * from user where id= #{id}")
-    User getUserByID(int id);
+    User getUserByID(@Param("id") int id);
 
     @Insert("insert into user(id,name, dept,phone,website,birthday) values(#{id},#{name}, #{dept},#{phone}, #{website}, #{birthday})")
     int insertUser(User user);
