@@ -1,16 +1,16 @@
 package com.myproject.service;
 
 import com.myproject.common.dataSourceUntil.TargetDataSource;
-import com.myproject.dao.mybatis.IUserMapper;
+import com.myproject.dao.mybatis.mapper.IUserMapper;
 import com.myproject.domain.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @Service(value = "userService")
 public class UserService {
-    @Resource
+    @Autowired
     IUserMapper iUserMapper;
 
 
