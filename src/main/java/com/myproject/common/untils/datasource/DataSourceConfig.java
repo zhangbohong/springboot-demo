@@ -1,4 +1,4 @@
-package com.myproject.common.dataSourceUntil;
+package com.myproject.common.untils.datasource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -13,13 +13,14 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
+import com.myproject.common.untils.datasource.DynamicDataSource;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-@MapperScan("com.myproject.dao.mybatis")
+@MapperScan("com.myproject.dao.mybatis.mapper")
 public class DataSourceConfig {
 
     @Bean(name = "masterDataSource")
@@ -57,7 +58,7 @@ public class DataSourceConfig {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dynamicDataSource());
         //此处设置为了解决找不到mapper文件的问题
-        sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*.xml"));
+        //sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*.xml"));
         return sqlSessionFactoryBean.getObject();
     }
 

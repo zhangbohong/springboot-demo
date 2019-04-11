@@ -1,4 +1,4 @@
-package com.myproject.common.dataSourceUntil;
+package com.myproject.common.untils.datasource;
 
 import java.lang.annotation.*;
 
