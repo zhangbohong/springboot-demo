@@ -1,4 +1,4 @@
-package com.myproject.common.untils.datasource;
+package com.myproject.common.utils.datasource;
 
 import java.util.ArrayList;
 import java.util.List;

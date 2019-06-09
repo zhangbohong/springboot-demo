@@ -1,6 +1,6 @@
 package com.myproject.service;
 
-import com.myproject.common.dataSourceUntil.TargetDataSource;
+import com.myproject.common.utils.datasource.TargetDataSource;
 import com.myproject.dao.mybatis.mapper.IUserMapper;
 import com.myproject.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;

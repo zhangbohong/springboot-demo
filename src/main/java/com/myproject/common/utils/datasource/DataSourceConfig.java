@@ -1,4 +1,4 @@
-package com.myproject.common.untils.datasource;
+package com.myproject.common.utils.datasource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;

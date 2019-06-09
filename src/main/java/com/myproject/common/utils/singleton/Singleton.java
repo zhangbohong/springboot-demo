@@ -1,4 +1,4 @@
-package com.myproject.common.untils.singleton;
+package com.myproject.common.utils.singleton;
 
 //public class Singleton {
 // 饿汉法 : 类创建时加载，无法做到延迟加载；

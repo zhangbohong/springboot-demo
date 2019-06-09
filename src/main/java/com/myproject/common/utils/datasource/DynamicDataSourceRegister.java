@@ -1,4 +1,4 @@
-package com.myproject.common.untils.datasource;
+package com.myproject.common.utils.datasource;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
