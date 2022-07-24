@@ -68,7 +68,7 @@
         <java.version>1.8</java.version>
     </properties>
     <build>
-        <finalName>springboot-test</finalName>
+        <finalName>springboot-demo</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
