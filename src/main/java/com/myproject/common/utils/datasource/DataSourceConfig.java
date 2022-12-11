@@ -43,7 +43,7 @@ public class DataSourceConfig {
         // 默认数据源
         dynamicDataSource.setDefaultTargetDataSource(masterDataSource());
         // 配置多数据源
-        Map<Object, Object> dsMap = new HashMap();
+        Map<Object, Object> dsMap = new HashMap<>();
         dsMap.put("master", masterDataSource());
         dsMap.put("readonly", readOnlyDataSource());
         dynamicDataSource.setTargetDataSources(dsMap);
